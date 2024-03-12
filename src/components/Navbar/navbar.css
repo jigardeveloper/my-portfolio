@@ -1,0 +1,147 @@
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar {
+  height: 4rem;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1000;
+}
+.logoContainer {
+  margin-right: auto;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+#logo {
+  font-family: "Alex Brush";
+}
+.navsContainer {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+  flex-wrap: wrap;
+  margin-right: 1rem;
+}
+.navsContainer a {
+  text-decoration: none;
+}
+.navs {
+  width: max-content;
+  /* width: 6.5rem; */
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  /* margin-left: 1rem; */
+  font-size: 1.5rem;
+}
+.active {
+  /* margin-left: 1rem; */
+  font-size: 1.5rem;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  border-bottom: 3px solid purple;
+  border-radius: 0.5rem;
+}
+.navs:hover {
+  cursor: pointer;
+  background-color: purple;
+  color: white;
+  /* border: 2px solid purple; */
+  filter: brightness(110%);
+  /* box-shadow: 0 0.5em 0.4em -0.4em purple; */
+  /* transform: translateY(-0.2em); */
+}
+.selectTheme {
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  width: 10rem;
+  justify-content: space-around;
+}
+.colorSelector {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+.colorSelector:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.selectMode {
+  background-color: rgb(146, 15, 178);
+  width: 4.3rem;
+  height: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.selectMode:hover {
+  cursor: pointer;
+}
+#lightModeBtn {
+  margin-left: 0.5rem;
+  margin-right: auto;
+}
+#darkModeBtn {
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+.selectTheme input {
+  display: none;
+}
+.menu {
+  display: none;
+}
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .navbar {
+    height: 4rem;
+  }
+  .logoContainer {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+  .navsContainer {
+    display: none;
+  }
+  .selectTheme {
+    margin-left: auto;
+    margin-right: 1rem;
+    /* background-color: aqua; */
+  }
+  .colorSelector {
+    margin-left: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .selectMode {
+    width: 4rem;
+    height: 1.8rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  .active {
+    width: max-content;
+    border-bottom: 4px solid purple;
+  } 
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
