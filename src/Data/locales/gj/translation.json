@@ -11,6 +11,7 @@
       "MERN સ્ટેક ડેવલોપર",
       "ઓપન સોર્સ યોગદાનકર્તા"
     ],
+    "nickName": "<  JD >",
     "Connect": "મને",
     "Connect1": " સંપર્ક કરવા માટે",
     "Connect2": " આવાજ આપો."
@@ -81,7 +82,7 @@
       {
         "projectTitle": "PortFolio Template",
         "description": "This project is a React app to generate a creative professional website based on Data provided. The website uses no backend and is free to fork and use.",
-        "sourceLink": "https://github.com/killer-abhi/Portfolio.git",
+        "sourceLink": "https://github.com/jigardeveloper/my-portfolio.git",
         "lastUpdated": "Jan 20 2023"
       },
       {

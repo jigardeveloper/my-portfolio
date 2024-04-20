@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import EducationImg from "../asset/kindpng_2158189.png";
-import EducationData from "../../Data/EducationData";
+import languagesDone from "../../Data/EducationData";
 import Certifications from "../Certifications/Certifications";
 import Degree from "./Degree";
 import classes from "./education.module.css";
@@ -11,7 +11,6 @@ function Education(props) {
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
   const uiColor = useSelector((state) => state.uiColor);
 
-  const languagesDone = EducationData.codingStatus;
   return (
     <Fragment>
       <div className={classes.educationHeader}>

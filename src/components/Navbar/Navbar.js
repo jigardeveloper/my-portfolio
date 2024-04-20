@@ -5,7 +5,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import "./navbar.css";
 import { themeActions } from "../../store/theme";
 import ColorModal from "./ColorModal";
-import PersonalData from "../../Data/PersonalData";
+import { t } from "i18next";
 import { languageMap } from "../../hooks/i18nextInit";
 import Select from "react-select";
 
@@ -80,7 +80,7 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
       >
         <div className="logoContainer">
           <div id="logo">
-            {PersonalData.firstName}&nbsp;&nbsp;{PersonalData.lastName}
+          {t("Home.FName")}&nbsp;&nbsp;{t("Home.LName")}
           </div>
         </div>
         <div className="navsContainer" style={{ color: nonThemeColor }}></div>

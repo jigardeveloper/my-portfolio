@@ -11,6 +11,7 @@
       "MERN Stack Developer",
       "Open Source Contributor"
     ],
+    "nickName": "<  JD >",
     "Connect": "Feel free to ",
     "Connect1": "connect",
     "Connect2": " with me."
@@ -80,7 +81,8 @@
       {
         "projectTitle": "PortFolio Template",
         "description": "This project is a React app to generate a creative professional website based on Data provided. The website uses no backend and is free to fork and use.",
-        "sourceLink": "https://github.com/killer-abhi/Portfolio.git",
+        "sourceLink": "https://github.com/jigardeveloper/my-portfolio.git",
+        "image": "path/to/image.jpg",
         "lastUpdated": "Jan 20 2023"
       },
       {

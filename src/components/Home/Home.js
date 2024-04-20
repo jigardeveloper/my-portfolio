@@ -1,6 +1,5 @@
 import React from "react";
 import profileAvatar from "../asset/logo.png";
-import PersonalData from "../../Data/PersonalData";
 import classes from "./home.module.css";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import { useSelector } from "react-redux";
@@ -13,7 +12,7 @@ function Home(props) {
   return (
     <main>
       <div className={classes.homeContent}>
-        <h1 className={classes.greeting}>{t("Home.Hii")}</h1>
+        <h1>{t("Home.Hii")}</h1>
         <h2>
           {t("Home.I")}
           &nbsp;
@@ -21,7 +20,7 @@ function Home(props) {
             {t("Home.FName")}&nbsp;{t("Home.LName")}
           </span>
         </h2>
-        <h3 style={{ color: nonThemeColor }}>{PersonalData.nickName}</h3>
+        <h3 style={{ color: nonThemeColor }}>{t("Home.nickName")}</h3>
         <div className={classes.autoText}>
           {t("Home.Iam")} &nbsp;{" "}
           <span id="typer" style={{ color: uiColor }}></span>

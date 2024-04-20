@@ -13,6 +13,7 @@ main {
   justify-content: space-between;
   width: 40%;
   height: 22rem;
+  align-items: center;
   /* animation: renderFromLeft 1s ease forwards; */
 }
 .personal-info {

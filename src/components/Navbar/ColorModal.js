@@ -1,11 +1,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 import { useSelector } from "react-redux";
-
-// import Zoom from '@mui/material/Zoom';
 import ThemeData from "../../Data/ThemeData";
-// import Card from '../UI/Card';
-
 import "./colorModal.css";
 
 const Backdrop = (props) => {
