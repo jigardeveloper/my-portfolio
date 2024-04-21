@@ -7,15 +7,15 @@ import CallIcon from "@mui/icons-material/Call";
 import { useSelector } from "react-redux";
 import { t } from "i18next";
 
-const data = ["+91 9664627247", "jigarahir0147@gmail.com", "dwraka gujarat"];
+const data = ["+91 9664627247", "jigarahir0147@gmail.com", "devbhumi dwarka, gujarat"];
 
 const GetInTouch = ({ btnText, setBtnText }) => {
   const uiColor = useSelector((state) => state.uiColor);
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
   const Icons = [
-    <LocationOnIcon fontSize="large" />,
-    <SendIcon fontSize="large" />,
     <CallIcon fontSize="large" />,
+    <SendIcon fontSize="large" />,
+    <LocationOnIcon fontSize="large" />,
   ];
 
   const contactDetails = data.map((item, index) => (

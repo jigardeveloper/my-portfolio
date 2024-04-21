@@ -12,6 +12,11 @@ const ProjectItem = (props) => {
 
   const Toggle = () => {
     setModal(!modal);
+    if (modal) {
+      document.body.classList.remove('modal-open');
+    } else {
+      document.body.classList.add('modal-open');
+    }
   }
 
   let description = props.project.description;
@@ -19,44 +24,29 @@ const ProjectItem = (props) => {
     description = " project description";
   }
   if (description.length > 120) {
-    description = description.substr(0, 120);
+    description = description.substr(0, 110);
     description = description + " ... ";
   }
+
+  const renderListItems = (items) => {
+    return items.map((item, index) => <li key={index}>{item}</li>);
+  };
 
   return (
     <Card className={classes.projectItem} onClick={() => Toggle()}>
       <h2 style={{ color: uiColor }}>{props.project.projectTitle}</h2>
       <p className={classes.description}>{description}</p>
-      <div className={classes.controls}>
-        <div className={classes.projectLink}>
-          {/* <a target="_blank" rel="noreferrer" href={props.project.sourceLink} style={{color:'orange'}}><StarIcon fontSize="large" /></a> */}
-          {/* <a
-            target="_blank"
-            rel="noreferrer"
-            href={props.project.sourceLink}
-            style={{ color: nonThemeColor }}
-          >
-          <GitHubIcon fontSize="large" />
-          </a> */}
-        </div>
-        <p className={classes.dateUpdated} style={{ color: nonThemeColor }}>
-          Last Updated On : {props.project.lastUpdated}
-        </p>
-      </div>
       {
         modal &&
-        <Modal
-          show={modal}
-          handleClose={() => Toggle()}
-        >
+        <Modal>
           <h1 style={{ color: nonThemeColor }}> {props.project.projectTitle}</h1>
-          {props.project?.image && <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img width={'800px'} height={'200px'} src={require(`../${props.project?.image}`)} alt="Project Cover" />
-          </section>}
+          {/* <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <img width={'800px'} height={'200px'} src={props.project?.image ? require(`../${props.project?.image}`): ''} alt="" />
+          </section> */}
 
           <div style={{ margin: "20px 0px 20px 40px", justifyContent: 'center', alignItems: 'center' }}>
             <section>
-              <h2 style={{ margin: "20px 0px 10px 0px", color: uiColor }}>Description</h2>
+              <h2 style={{ margin: "20px 0px 10px 0px", color: uiColor }}> {t("Project.projectDescription")}</h2>
               <p style={{ margin: "20px 0px 10px 0px" }} className={classes.description}>
                 &nbsp;&nbsp;{props.project.description}
               </p>
@@ -66,11 +56,7 @@ const ProjectItem = (props) => {
                 {t("Project.key_fetures_title")}
               </h2>
               <ul className={classes.description}>
-                {props?.project?.key_features?.map(
-                  (item, index) => {
-                    return <li key={index}>{item}</li>
-                  }
-                )}
+                {renderListItems(props?.project?.key_features)}
               </ul>
             </section>
             <section>
@@ -78,11 +64,7 @@ const ProjectItem = (props) => {
                 {t("Project.technology_stack_title")}
               </h2>
               <ul className={classes.description}>
-                {props?.project?.technology_stack?.map(
-                  (item, index) => {
-                    return <li key={index}>{item}</li>
-                  }
-                )}
+                {renderListItems(props?.project?.technology_stack)}
               </ul>
             </section>
             <section>
@@ -90,11 +72,7 @@ const ProjectItem = (props) => {
                 {t("Project.design_considerations_title")}
               </h2>
               <ul className={classes.description}>
-                {props?.project?.design_considerations?.map(
-                  (item, index) => {
-                    return <li key={index}>{item}</li>
-                  }
-                )}
+                {renderListItems(props?.project?.design_considerations)}
               </ul>
             </section>
             <section>
@@ -102,11 +80,7 @@ const ProjectItem = (props) => {
                 {t("Project.future_enhancements_title")}
               </h2>
               <ul className={classes.description}>
-                {props?.project?.future_enhancements?.map(
-                  (item, index) => {
-                    return <li key={index}>{item}</li>
-                  }
-                )}
+                {renderListItems(props?.project?.future_enhancements)}
               </ul>
             </section>
           </div>

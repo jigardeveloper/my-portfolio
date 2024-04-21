@@ -68,7 +68,7 @@
   "RecentWorks": {
     "TitleF": "My Recent",
     "TitleL": " Works",
-    "Desc": "My works makes use of vast variety of latest technology tools. My best experience is to create React projects and deploy them to web applications using Github Pages."
+    "Desc": "In my recent works as a MERN stack developer, I've had the opportunity to tackle diverse challenges and craft innovative solutions. One notable project involved building a comprehensive e-commerce platform from the ground up, integrating MongoDB for robust database management, Express.js for efficient backend development, React.js for dynamic user interfaces, and Node.js for scalable server-side logic. Through meticulous attention to detail and collaborative problem-solving, I successfully implemented features such as user authentication, product catalog management, and secure payment processing using Stripe API. Additionally, I optimized performance and ensured seamless user experiences by leveraging Redux for state management. Another project that showcased my skills involved developing a real-time chat application using WebSockets, MongoDB Atlas for cloud-based database hosting, and React Hooks for front-end responsiveness."
   },
   "SkillSet": {
     "TitleF": "Programming",
@@ -81,6 +81,7 @@
     "technology_stack_title": "Technology Stack",
     "design_considerations_title": "Design Considerations",
     "future_enhancements_title": "Future Enhancements",
+    "projectDescription": "Description",
     "ProjectsList": [
       {
         "projectTitle": "PortFolio Template",
@@ -94,28 +95,27 @@
           "Contact Information With mail send",
           "About Me/About Us Page"
         ],
-        
         "technology_stack": [
           "Frontend: HTML, CSS, JavaScript (React.js)",
           "Backend: The website uses no backend",
-          "Eamil-js for send contact mail",          
+          "Eamil-js for send contact mail",
           "Hosting: Netlify"
         ],
-       
         "design_considerations": [
           "Choose readable fonts for body text and headings and Establish a clear visual hierarchy",
           "Responsive user experience",
-          "Cross-Browser Compatibility"          
+          "Cross-Browser Compatibility"
         ],
         "future_enhancements": [
           "Real-Time Collaboration Tools",
-          "Integrated Blog or Podcast"          
-        ]  
+          "Integrated Blog or Podcast"
+        ]
       },
       {
         "projectTitle": "Expense Tracker",
         "description": "A React project to get a track of weekly expenses. It also creates a graphical data to help monitor the expenses on daily basis and ",
-        "sourceLink": "https://github.com/killer-abhi/expense-tracker.git",
+        "sourceLink": "",
+        "image": "",
         "key_features": [
           "User Authentication and Profile Creation",
           "Group Creation",
@@ -141,12 +141,180 @@
           "Scalability to accommodate a growing user base and increasing data volumes."
         ],
         "future_enhancements": [
-          "Integration with payment gateways for settling expenses directly within the app.",
-          "Automated expense tracking through OCR (Optical Character Recognition) technology for scanning receipts.",
-          "Enhanced reporting and analytics features for monitoring spending patterns and group dynamics."
-        ]    
+          "No future enhancements"
+        ]
+      },
+      {
+        "projectTitle": "Realtime Chat App",
+        "description": "A real-time messaging application built with React.js and Node.js, enabling users to communicate instantly with friends and colleagues.",
+        "sourceLink": "",
+        "image": "",
+        "key_features": [
+          "User Authentication and Profile Creation",
+          "Real-Time Messaging",
+          "Group Chat",
+          "File Sharing",
+          "Message Encryption",
+          "Message History",
+          "Online Status Indicators",
+          "Notification System"
+        ],
+        "technology_stack": [
+          "Frontend: HTML, CSS, JavaScript (React.js)",
+          "Backend: Node.js with Express.js",
+          "Database: MongoDB or Firebase Realtime Database",
+          "Authentication: JSON Web Tokens (JWT)",
+          "Real-Time Updates: WebSocket protocol (Socket.io)",
+          "Hosting: Amazon Web Services (AWS) or Heroku"
+        ],
+        "design_considerations": [
+          "Intuitive and responsive user interface for seamless communication across devices.",
+          "End-to-end encryption for ensuring privacy and security of messages.",
+          "Efficient message delivery mechanism to handle high traffic and large user base.",
+          "Scalability to accommodate increasing user demand and message volume."
+        ],
+        "future_enhancements": [
+          "Integration with video and voice call functionalities for richer communication experience.",
+          "Message translation feature for supporting multilingual conversations.",
+          "AI-powered chatbots for providing automated assistance and information retrieval."
+        ]
+      },
+      {
+        "projectTitle": "Real-Time Dashboard",
+        "description": "A React project for monitoring real-time data with a dynamic dashboard interface. It leverages Supabase for data storage and authentication, and integrates Socket.io for real-time updates. apply role based auth guard",
+        "sourceLink": "",
+        "image": "",
+        "key_features": [
+          "User Authentication and Authorization with Supabase and role based auth guard",
+          "Real-Time Data Visualization on Dashboard",
+          "Dynamic Data Filtering and Sorting",
+          "Responsive Design for Various Screen Sizes",
+          "Real-Time Updates with Socket.io",
+          "Customizable Dashboard Widgets"
+        ],
+        "technology_stack": [
+          "Frontend: HTML, CSS, JavaScript (React.js)",
+          "Backend: Supabase for Database and Authentication",
+          "Real-Time Updates: Socket.io",
+          "Hosting: Amazon Web Services (AWS) or Heroku"
+        ],
+        "design_considerations": [
+          "Intuitive and Interactive Dashboard Interface",
+          "Efficient Data Fetching and Management",
+          "Scalable Architecture to Handle Large Data Streams",
+          "Secure Authentication and Data Transmission"
+        ],
+        "future_enhancements": [
+          "Integration with additional data sources",
+          "Advanced Analytics and Reporting Features",
+          "Enhanced Customization Options for Dashboard Widgets"
+        ]
+      },
+      {
+        "projectTitle": "Student Management System",
+        "description": "A comprehensive system built with Nest.js and MySQL for managing student information, academic records, and communication between stakeholders. The system includes role-based dashboards for administrators, teachers, students, and parents, along with a chat module for real-time communication.",
+        "sourceLink": "",
+        "image": "",
+        "key_features": [
+          "Role-based User Authentication and Authorization",
+          "User-friendly Dashboards for Admin, Teacher, Student, and Parents",
+          "Student Enrollment and Profile Management",
+          "Academic Record Management (Grades, Attendance, Assignments)",
+          "Communication Module with Chat Functionality",
+          "Notification System for Important Updates",
+          "User online ofline status",
+          "Data Security and Access Controls"
+        ],
+        "technology_stack": [
+          "Backend: Nest.js (Node.js framework)",
+          "Database: MySQL",
+          "Authentication and Authorization: JWT (JSON Web Tokens)",
+          "Real-Time Communication: Socket.io",
+          "Frontend: HTML, CSS, JavaScript (React.js) or Next.js",
+          "Hosting: AWS or Heroku"
+        ],
+        "design_considerations": [
+          "Intuitive User Interface for Easy Navigation",
+          "Responsive Design for Accessibility on Various Devices",
+          "Scalable Architecture to Handle Growing User Base",
+          "Robust Data Validation and Error Handling",
+          "Modular Design for Easy Maintenance and Expansion"
+        ],
+        "future_enhancements": [
+          "No future enhancements"
+        ]
+      },
+      {
+        "projectTitle": "Social Media Platform - Dating App",
+        "description": "A dating app built with Node.js that resembles Tinder, allowing users to create profiles, view other users' profiles, swipe left or right to indicate interest, and chat with matches.",
+        "sourceLink": "",
+        "image": "",
+        "key_features": [
+          "User Authentication and Profile Creation",
+          "Profile Discovery with Swipe Gesture (Similar to Tinder)",
+          "Matching Algorithm based on User Preferences",
+          "Real-Time Chat Functionality",
+          "Geolocation Integration for Nearby Matches",
+          "Integration with Social Media APIs for Profile Enrichment",
+          "Privacy Controls for User Safety",
+          "Notification System for Matches and Messages"
+        ],
+        "technology_stack": [
+          "Backend: Node.js with Express.js",
+          "Database: MongoDB or PostgreSQL",
+          "Authentication: OAuth or JWT (JSON Web Tokens)",
+          "Real-Time Communication: WebSocket protocol (Socket.io)",
+          "Geolocation: Google Maps API or similar service",
+          "Frontend: HTML, CSS, JavaScript (React.js or Vue.js)",
+          "Hosting: AWS, Google Cloud Platform, or Heroku"
+        ],
+        "design_considerations": [
+          "Intuitive User Interface for Swiping and Interacting with Profiles",
+          "Secure Authentication and Data Transmission",
+          "Scalable Architecture to Handle Concurrent Users",
+          "Personalized Recommendations based on User Behavior",
+          "Moderation Features to Prevent Abuse and Spam"
+        ],
+        "future_enhancements": [
+          "No future enhancements"
+        ]
+      },
+      {
+        "projectTitle": "Shipping Management System",
+        "description": "A comprehensive system for managing shipping operations, tracking shipments, and optimizing logistics. The system includes features for managing orders, tracking packages, generating shipping labels, and analyzing shipping data.",
+        "sourceLink": "",
+        "image": "",
+        "key_features": [
+          "Order Management: Create, Edit, and Track Orders",
+          "Send mail, message and notification for order and invitation",
+          "Customer Management and Address Book",
+          "Inventory Management for Shipping Supplies",
+          "Shipping Label Generation",
+          "Analytics Dashboard for Shipping Data Analysis",
+          "Shipment Tracking with Real-Time Updates",
+          "Integration with Shipping Carriers for Rate Calculation and Label Printing",
+          "User Authentication and Authorization"
+        ],
+        "technology_stack": [
+          "Frontend: React.js",
+          "Backend: Node.js with Express.js",
+          "Database: MongoDB",
+          "Authentication: JWT (JSON Web Tokens)",
+          "Real-Time Updates: WebSocket protocol (Socket.io)",
+          "Data Visualization: Chart.js or similar library",
+          "Hosting: AWS or Heroku"
+        ],
+        "design_considerations": [
+          "Intuitive User Interface for Easy Navigation",
+          "Responsive Design for Accessibility on Various Devices",
+          "Scalable Architecture to Handle Growing Data Volume",
+          "Data Security and Privacy Measures",
+          "Efficient Integration with External APIs"
+        ],
+        "future_enhancements": [
+          "No future enhancements"
+        ]
       }
-      
     ]
   },
   "Touch": {
