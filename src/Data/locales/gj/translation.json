@@ -78,11 +78,12 @@
   "Project": {
     "Title": "મારા પ્રોઝેક્ટ્સ",
     "MoreProjects": "વધુ પ્રોજેક્ટ્સ",
-    "DUMMY_PROJECTS": [
+    "ProjectsList": [
       {
         "projectTitle": "PortFolio Template",
         "description": "This project is a React app to generate a creative professional website based on Data provided. The website uses no backend and is free to fork and use.",
         "sourceLink": "https://github.com/jigardeveloper/my-portfolio.git",
+        "image": "asset/project-cover10.png",
         "lastUpdated": "Jan 20 2023"
       },
       {

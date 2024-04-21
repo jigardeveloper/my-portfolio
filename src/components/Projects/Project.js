@@ -35,7 +35,7 @@ const Projects = (props) => {
         {t("Project.Title")}
       </h1>
       <div className={styles.projectList}>
-        {t("Project.DUMMY_PROJECTS", { returnObjects: true }).map(
+        {t("Project.ProjectsList", { returnObjects: true }).map(
           (item, index) => {
             return <ProjectItem key={index} project={item} />;
           }

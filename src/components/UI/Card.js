@@ -9,6 +9,7 @@ const Card = (props) => {
     <div
       className={`${styles.Card} ${props.className}`}
       style={{ borderColor: uiColor }}
+      onClick={props.onClick}
     >
       {props.children}
     </div>
