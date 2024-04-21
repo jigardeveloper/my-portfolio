@@ -77,11 +77,12 @@
   "Project": {
     "Title": "मेरी परियोजनाएं",
     "MoreProjects": "अधिक परियोजनाएं",
-    "DUMMY_PROJECTS": [
+    "ProjectsList": [
       {
         "projectTitle": "पोर्टफोलियो टेम्पलेट",
         "description": "यह परियोजना एक रिएक्ट ऐप है जो दिए गए डेटा पर आधारित एक रचनात्मक पेशेवर वेबसाइट उत्पन्न करने के लिए है। वेबसाइट कोई बैकएंड उपयोग नहीं करती है और इसे फ्री में फॉर्क और उपयोग करने के लिए है।",
         "sourceLink": "https://github.com/jigardeveloper/my-portfolio.git",
+        "image": "asset/project-cover10.png",
         "lastUpdated": "20 जनवरी 2023"
       },
       {

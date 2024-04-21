@@ -29,7 +29,7 @@
 }
 .projectItem:hover {
   cursor: pointer;
-  animation: zoom 0.2s ease-in-out normal forwards;
+  /* animation: zoom 0.2s ease-in-out normal forwards; */
 }
 .dateUpdated {
   margin-left: auto;
