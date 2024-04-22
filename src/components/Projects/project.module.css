@@ -9,14 +9,12 @@
 .projectImg img {
   max-width: 30rem;
   height: 30rem;
-  /* animation: renderFromLeft 0.5s ease forwards; */
 }
 
 .projectHeader {
   width: 40%;
   text-align: center;
   font-weight: 500;
-  /* animation: renderFromRight 0.5s ease forwards; */
 }
 
 .projectHeader h1 {

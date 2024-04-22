@@ -1,7 +1,6 @@
 .contactFormCard {
   margin: 2rem auto;
   width: 50%;
-  /* background-color: aqua; */
 }
 .contactFormCard h1 {
   text-align: left;
@@ -34,18 +33,12 @@
 }
 .contactForm textarea {
   padding-top: 1rem;
-  /* width: 100%; */
   height: 10rem;
   width: 20rem;
   max-width: 100%;
   resize: none;
 }
-/* .Inputs:hover {
-    background-color: #e0d4fd;
-} */
 .sendBtn {
-  /* display: flex;
-    justify-content: flex-end; */
   margin-top: 1rem;
   margin-left: 2rem;
 }

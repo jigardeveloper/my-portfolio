@@ -6,14 +6,13 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 // import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-import classes from "./socialLinks.module.css";
 import { useSelector } from "react-redux";
 
 const SocialLinks = (props) => {
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
   return (
     <div
-      className={`${classes.socialLinks} ${props.className}`}
+      className={`${props.className}`}
       style={{ color: nonThemeColor }}
     >
       <a href={SocialData.githubLink} target="_blank">
