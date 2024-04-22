@@ -1,8 +1,6 @@
 import React from "react";
 import './modal.css';
-import classes from "./ProjectItem.module.css";
 import { useSelector } from "react-redux";
-import Close from "@mui/icons-material/Close";
 
 const Modal = ({ children }) => {
   const backgroundColor = useSelector((state) => state.theme.backgroundColor);

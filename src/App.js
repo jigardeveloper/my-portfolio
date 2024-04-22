@@ -1,5 +1,10 @@
 import { TransitionGroup } from "react-transition-group";
 import "./app.css";
+import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import "./hooks/i18nextInit";
+import { t } from "i18next";
 
 //components
 import Navbar from "./components/Navbar/Navbar";
@@ -9,12 +14,7 @@ import Education from "./components/Education/Education";
 import Projects from "./components/Projects/Project";
 import AboutMe from "./components/About Me/AboutMe";
 import Typewriter from "typewriter-effect/dist/core";
-import { useSelector } from "react-redux";
 import GetInTouch from "./components/Get In Touch/GetInTouch";
-import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
-import "./hooks/i18nextInit";
-import { t } from "i18next";
 
 const App = () => {
   const { i18n } = useTranslation();

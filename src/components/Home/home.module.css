@@ -1,5 +1,4 @@
 main {
-  /* height:100vh; */
   margin-bottom: 4.5rem;
   height: auto;
   display: flex;
@@ -14,7 +13,6 @@ main {
   width: 40%;
   height: 22rem;
   align-items: center;
-  /* animation: renderFromLeft 1s ease forwards; */
 }
 .personal-info {
   height: 10rem;
@@ -56,7 +54,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* animation: renderFromRight 1s ease forwards; */
 }
 .avatarImage img {
   height: 30rem;
@@ -71,15 +68,13 @@ main {
 /* For Mobile View Only */
 @media (max-width: 768px) {
   main {
-    /* margin-top: 5rem; */
     display: flex;
     flex-direction: column-reverse;
     height: auto;
   }
   .homeContent {
     margin-top: 2rem;
-    width: 80%;
-    /* background-color: aqua; */
+    width: 80%;    
   }
   .homeContent h1 {
     font-size: 1.5rem;
