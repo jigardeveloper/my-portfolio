@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
@@ -12,7 +12,7 @@ import Select from "react-select";
 const Navbar = ({ setSelectedLang, selectedLang }) => {
   const dispatch = useDispatch();
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
-  const mode = useSelector((state) => state.mode);  
+  const mode = useSelector((state) => state.mode);
   const activeColor = useSelector((state) => state.theme.color);
   const [isColorModalShown, setColorModalShown] = useState(false);
 
@@ -20,29 +20,17 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
     dispatch(themeActions.changeThemeColor(newColor));
   };
 
-  function handleLanguageChange(e) {
-    setSelectedLang(e.value);
-    localStorage.setItem("i18nextLng", e.value);
-  }
+  const handleLanguageChange = useCallback(
+    (e) => {
+      setSelectedLang(e.value);
+      localStorage.setItem("i18nextLng", e.value);
+    },
+    [setSelectedLang]
+  );
 
-  function handleModeChange() {
-    const lightModeBtn = document.getElementById("lightModeBtn");
-    const darkModeBtn = document.getElementById("darkModeBtn");
-    if (mode === "light") {
-      lightModeBtn.style.display = "none";
-      darkModeBtn.style.display = "block";
-      darkModeBtn.style.color = "black";
-    } else {
-      lightModeBtn.style.display = "block";
-      darkModeBtn.style.display = "none";
-      lightModeBtn.style.color = "white";
-    }
+  const handleModeChange = useCallback(() => {
     dispatch(themeActions.toggleMode());
-  }
-
-  function handleColorSelector() {
-    setColorModalShown((prev) => !prev);
-  }
+  }, [dispatch]);
 
   useEffect(() => {
     const lightModeBtn = document.getElementById("lightModeBtn");
@@ -52,7 +40,7 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
       darkModeBtn.style.display = "block";
       darkModeBtn.style.color = "black";
     }
-  }, [mode === "dark"]);
+  }, [mode]);
 
   let defaultLan;
   switch (selectedLang) {
@@ -69,18 +57,19 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
       defaultLan = { value: "en", label: "English" };
       break;
   }
+
   return (
     <div className="main">
       <div
         className="navbar"
         style={{
-          backgroundColor: mode === "light"? "rgba(204, 245, 255, 0.6)" : "rgba(0, 0, 0, 0.7)",
-          borderBottom: "3px solid purple" 
+          backgroundColor: mode === "light" ? "rgba(204, 245, 255, 0.6)" : "rgba(0, 0, 0, 0.7)",
+          borderBottom: "3px solid purple"
         }}
       >
         <div className="logoContainer">
           <div id="logo">
-          {t("Home.FName")}&nbsp;&nbsp;{t("Home.LName")}
+            {t("Home.FName")}&nbsp;&nbsp;{t("Home.LName")}
           </div>
         </div>
         <div className="navsContainer" style={{ color: nonThemeColor }}></div>
@@ -90,7 +79,6 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
           defaultValue={defaultLan}
           onChange={handleLanguageChange}
           placeholder={"Placeholder"}
-          // className="selectTheme"
           styles={{
             option: (base) => ({
               ...base,
@@ -113,23 +101,23 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
         />
         <div className="selectTheme">
           <div className="selectMode" onClick={handleModeChange}>
-            <div id="lightModeBtn" style={{ color: "white" }}>
+            <div id="lightModeBtn" style={{ display: mode === "light" ? "block" : "none", color: "white" }}>
               <LightModeIcon />
             </div>
-            <div id="darkModeBtn" style={{ display: "none" }}>
+            <div id="darkModeBtn" style={{ display: mode === "dark" ? "block" : "none", color: "black" }}>
               <DarkModeIcon />
             </div>
           </div>
 
           <div
             className="colorSelector"
-            onClick={handleColorSelector}
+            onClick={() => setColorModalShown((prev) => !prev)}
             style={{ backgroundColor: activeColor }}
           >
             {isColorModalShown && (
               <ColorModal
                 selectColor={changeColor}
-                onConfirm={handleColorSelector}
+                onConfirm={() => setColorModalShown(false)}
               />
             )}
           </div>
