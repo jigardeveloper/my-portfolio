@@ -69,7 +69,7 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
       >
         <div className="logoContainer">
           <div id="logo">
-            {t("Home.FName")}&nbsp;&nbsp;{t("Home.LName")}
+            {t("Home.FName")}&nbsp;{t("Home.LName")}
           </div>
         </div>
         <div className="navsContainer" style={{ color: nonThemeColor }}></div>

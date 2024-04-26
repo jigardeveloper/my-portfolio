@@ -7,8 +7,8 @@ const Card = (props) => {
   const uiColor = useSelector((state) => state.uiColor);
   return (
     <div
-      className={`${styles.Card} ${props.className}`}
-      style={{ borderColor: uiColor }}
+      className={`${styles.Card} ${props.className} ${props.mode === "light" ? styles.LightHover : styles.DarkHover}`}
+      style={{ borderColor: uiColor}}
       onClick={props.onClick}
     >
       {props.children}

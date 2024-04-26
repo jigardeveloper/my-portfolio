@@ -3,3 +3,21 @@
   border-radius: 8px;
   padding: 10px;
 }
+
+/* Hover effect for light mode */
+.LightHover {
+  transition: box-shadow 0.3s ease;
+}
+
+.LightHover:hover {
+  box-shadow: 0px 0px 20px -5px #000;
+}
+
+/* Hover effect for dark mode */
+.DarkHover {
+  transition: box-shadow 0.3s ease;
+}
+
+.DarkHover:hover {
+  box-shadow: 0px 0px 20px -5px #fff;
+}

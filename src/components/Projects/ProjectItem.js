@@ -9,6 +9,7 @@ const ProjectItem = (props) => {
   const uiColor = useSelector((state) => state.uiColor);
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
   const [modal, setModal] = React.useState(false)
+  const mode = useSelector((state) => state.mode);
 
   const Toggle = () => {
     setModal(!modal);
@@ -33,7 +34,7 @@ const ProjectItem = (props) => {
   };
 
   return (
-    <Card className={classes.projectItem} onClick={() => Toggle()}>
+    <Card mode={mode} className={classes.projectItem} onClick={() => Toggle()}>
       <h2 style={{ color: uiColor }}>{props.project.projectTitle}</h2>
       <p className={classes.description}>{description}</p>
       {
