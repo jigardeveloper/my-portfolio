@@ -78,7 +78,6 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
           options={languageMap}
           defaultValue={defaultLan}
           onChange={handleLanguageChange}
-          placeholder={"Placeholder"}
           styles={{
             option: (base) => ({
               ...base,
@@ -95,7 +94,7 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
             borderRadius: 5,
             colors: {
               ...theme.colors,
-              primary: "#4C6FFF",
+              primary: "purple",
             },
           })}
         />

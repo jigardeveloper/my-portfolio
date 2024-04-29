@@ -41,9 +41,9 @@ const ProjectItem = (props) => {
         modal &&
         <Modal>
           <h1 style={{ color: nonThemeColor }}> {props.project.projectTitle}</h1>
-          {/* <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img width={'800px'} height={'200px'} src={props.project?.image ? require(`../${props.project?.image}`): ''} alt="" />
-          </section> */}
+          <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px'}}>
+            <img style={{ borderRadius:'9px'}} width={'800px'} height={'400px'} src={props.project?.image ? require(`../${props.project?.image}`) : ''} alt="" />
+          </section>
 
           <div style={{ margin: "20px 0px 20px 40px", justifyContent: 'center', alignItems: 'center' }}>
             <section>

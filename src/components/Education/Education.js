@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import EducationImg from "../asset/kindpng_2158189.png";
-import languagesDone from "../../Data/EducationData";
+import { languagesDone } from "../../Data/EducationData";
 import Certifications from "../Certifications/Certifications";
 import Degree from "./Degree";
 import classes from "./education.module.css";

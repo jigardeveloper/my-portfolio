@@ -6,6 +6,7 @@ import SocialData from "../../Data/SocialData";
 import Button from "../UI/Button";
 import ProgrammingSkills from "../Professional Skillset/ProgrammingSkills";
 import { useSelector } from "react-redux";
+import { projectImage } from "../../Data/EducationData";
 import { t } from "i18next";
 
 const Projects = (props) => {
@@ -37,7 +38,8 @@ const Projects = (props) => {
       <div className={styles.projectList}>
         {t("Project.ProjectsList", { returnObjects: true }).map(
           (item, index) => {
-            return <ProjectItem key={index} project={item} />;
+            let data = { ...item, image: projectImage[index] }
+            return <ProjectItem key={index} project={data} />;
           }
         )}
       </div>
