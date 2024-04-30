@@ -90,7 +90,8 @@ main {
     margin-top: 2rem;
   }
   .avatarImage img {
-    height: 15rem;
+    height: 19rem;
+    width: 19rem;
     object-fit: cover;
   }
   .connectText {

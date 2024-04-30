@@ -6,7 +6,7 @@
   font-family: "Barlow Condensed";
 }
 .eduImg {
-  margin: 5rem auto;
+  margin: 7rem auto;
   height: 30rem;
   width: 30rem;
 }
@@ -41,7 +41,7 @@
   width: 100%;
 }
 .progressBar label {
-  text-align: center;
+  text-align: left;
   width: 20%;
   font-size: 1.8rem;
   font-weight: 800;
@@ -53,7 +53,7 @@
   font-weight: 800;
 }
 .progressBar progress {
-  width: 80%;
+  width: 60%;
   -webkit-appearance: none;
   appearance: none;
   height: 1.8rem;
