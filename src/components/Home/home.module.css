@@ -50,13 +50,14 @@ main {
   font-weight: 600;
 }
 .avatarImage {
-  margin-top: 5rem;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .avatarImage img {
-  height: 30rem;
+  height: 40rem;
+  width: 37rem;
   object-fit: cover;
 }
 .connectText {

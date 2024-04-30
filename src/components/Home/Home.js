@@ -17,7 +17,7 @@ function Home(props) {
           {t("Home.I")}
           &nbsp;
           <span id="name" style={{ color: uiColor }}>
-            {t("Home.FName")}&nbsp;{t("Home.LName")}
+            {t("Home.FName")}
           </span>
         </h2>
         <h3 style={{ color: nonThemeColor }}>{t("Home.nickName")}</h3>

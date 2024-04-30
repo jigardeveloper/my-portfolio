@@ -1,7 +1,7 @@
 {
   "Home": {
     "Hii": "Hi There !",
-    "I": "I'm",
+    "I": "Name is",
     "FName": "  Jigar",
     "LName": "  Ahir",
     "Iam": "I am a  ",
@@ -18,7 +18,7 @@
   },
   "About": {
     "Title": "About Me",
-    "Desc": "Hi Everyone, I am Jigar Ahir from Gujarat, India.I learned HTML, CSS, JavaScript etc, Worked with libraries & frameworks like ReactJS, NextJS, NodeJS, ExpressjJS, NestJS. Have a keen knowledge of databases like MySQL, MongoDB and Firebase. Apart from Coding I love to play games.",
+    "Desc": "Introducing myself, Jigar Ahir hailing from the vibrant lands of Gujarat, India! 🇮🇳 Fluent in the languages of the web - HTML, CSS, and JavaScript, I've delved deep into the world of coding. From crafting sleek interfaces with ReactJS and NextJS to powering up the backend with NodeJS, ExpressJS, and NestJS, I'm no stranger to the latest tech stacks. Databases? You name it - MySQL, MongoDB, and even Firebase, I've got it covered. But hey, life's not all about code, right? When I'm not busy crafting digital wonders, you'll find me immersed in the captivating world of anime, where every episode is a journey and  every story is an adventure waiting to unfold! 🎌",
     "SeeResume": "See My Resume"
   },
   "Education": {
@@ -87,7 +87,6 @@
         "projectTitle": "PortFolio Template",
         "description": "This project is a React app to generate a creative professional website based on Data provided. The website uses no backend and is free to fork and use.",
         "sourceLink": "https://github.com/jigardeveloper/my-portfolio.git",
-        "image": "asset/project-cover10.png",
         "key_features": [
           "Clean and Intuitive Design and Portfolio Showcase",
           "Responsive Design",
@@ -115,7 +114,6 @@
         "projectTitle": "Expense Tracker",
         "description": "A React project to get a track of weekly expenses. It also creates a graphical data to help monitor the expenses on daily basis and ",
         "sourceLink": "",
-        "image": "",
         "key_features": [
           "User Authentication and Profile Creation",
           "Group Creation",
@@ -148,7 +146,6 @@
         "projectTitle": "Realtime Chat App",
         "description": "A real-time messaging application built with React.js and Node.js, enabling users to communicate instantly with friends and colleagues.",
         "sourceLink": "",
-        "image": "",
         "key_features": [
           "User Authentication and Profile Creation",
           "Real-Time Messaging",
@@ -183,7 +180,6 @@
         "projectTitle": "Real-Time Dashboard",
         "description": "A React project for monitoring real-time data with a dynamic dashboard interface. It leverages Supabase for data storage and authentication, and integrates Socket.io for real-time updates. apply role based auth guard",
         "sourceLink": "",
-        "image": "",
         "key_features": [
           "User Authentication and Authorization with Supabase and role based auth guard",
           "Real-Time Data Visualization on Dashboard",
@@ -214,7 +210,6 @@
         "projectTitle": "Student Management System",
         "description": "A comprehensive system built with Nest.js and MySQL for managing student information, academic records, and communication between stakeholders. The system includes role-based dashboards for administrators, teachers, students, and parents, along with a chat module for real-time communication.",
         "sourceLink": "",
-        "image": "",
         "key_features": [
           "Role-based User Authentication and Authorization",
           "User-friendly Dashboards for Admin, Teacher, Student, and Parents",
@@ -248,7 +243,6 @@
         "projectTitle": "Social Media Platform - Dating App",
         "description": "A dating app built with Node.js that resembles Tinder, allowing users to create profiles, view other users' profiles, swipe left or right to indicate interest, and chat with matches.",
         "sourceLink": "",
-        "image": "",
         "key_features": [
           "User Authentication and Profile Creation",
           "Profile Discovery with Swipe Gesture (Similar to Tinder)",
@@ -283,7 +277,6 @@
         "projectTitle": "Shipping Management System",
         "description": "A comprehensive system for managing shipping operations, tracking shipments, and optimizing logistics. The system includes features for managing orders, tracking packages, generating shipping labels, and analyzing shipping data.",
         "sourceLink": "",
-        "image": "",
         "key_features": [
           "Order Management: Create, Edit, and Track Orders",
           "Send mail, message and notification for order and invitation",

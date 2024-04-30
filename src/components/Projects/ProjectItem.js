@@ -9,6 +9,7 @@ const ProjectItem = (props) => {
   const uiColor = useSelector((state) => state.uiColor);
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
   const [modal, setModal] = React.useState(false)
+  const mode = useSelector((state) => state.mode);
 
   const Toggle = () => {
     setModal(!modal);
@@ -33,16 +34,16 @@ const ProjectItem = (props) => {
   };
 
   return (
-    <Card className={classes.projectItem} onClick={() => Toggle()}>
+    <Card mode={mode} className={classes.projectItem} onClick={() => Toggle()}>
       <h2 style={{ color: uiColor }}>{props.project.projectTitle}</h2>
       <p className={classes.description}>{description}</p>
       {
         modal &&
         <Modal>
           <h1 style={{ color: nonThemeColor }}> {props.project.projectTitle}</h1>
-          {/* <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img width={'800px'} height={'200px'} src={props.project?.image ? require(`../${props.project?.image}`): ''} alt="" />
-          </section> */}
+          <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px'}}>
+            <img style={{ borderRadius:'9px'}} width={'800px'} height={'400px'} src={props.project?.image ? require(`../${props.project?.image}`) : ''} alt="" />
+          </section>
 
           <div style={{ margin: "20px 0px 20px 40px", justifyContent: 'center', alignItems: 'center' }}>
             <section>

@@ -1,4 +1,4 @@
-const languagesDone = [
+export const languagesDone = [
   {
     name: "HTML",
     percentDone: 90,
@@ -24,4 +24,13 @@ const languagesDone = [
     percentDone: 80,
   },
 ];
-export default languagesDone;
+
+export const projectImage = [
+  'asset/project/portfolio.png',
+  'asset/project/expense-tracker-img.jpeg',
+  'asset/project/real-time-chat-img.png',
+  'asset/project/realtime-deshboard-img.png',
+  'asset/project/student-management-img.png',
+  'asset/project/dateing-app-img.jpg',
+  'asset/project/shipp-management-img.png'
+];

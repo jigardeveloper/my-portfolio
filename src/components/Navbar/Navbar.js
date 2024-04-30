@@ -69,7 +69,7 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
       >
         <div className="logoContainer">
           <div id="logo">
-            {t("Home.FName")}&nbsp;&nbsp;{t("Home.LName")}
+            {t("Home.FName")}&nbsp;{t("Home.LName")}
           </div>
         </div>
         <div className="navsContainer" style={{ color: nonThemeColor }}></div>
@@ -78,7 +78,6 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
           options={languageMap}
           defaultValue={defaultLan}
           onChange={handleLanguageChange}
-          placeholder={"Placeholder"}
           styles={{
             option: (base) => ({
               ...base,
@@ -95,7 +94,7 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
             borderRadius: 5,
             colors: {
               ...theme.colors,
-              primary: "#4C6FFF",
+              primary: "purple",
             },
           })}
         />
