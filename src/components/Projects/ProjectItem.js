@@ -4,6 +4,8 @@ import Card from "../UI/Card";
 import { useSelector } from "react-redux";
 import Modal from "./ProjectDetails";
 import { t } from "i18next";
+import RemoveRedEye from "@mui/icons-material/RemoveRedEyeTwoTone";
+import CancelIcon from '@mui/icons-material/Cancel';
 
 const ProjectItem = (props) => {
   const uiColor = useSelector((state) => state.uiColor);
@@ -34,15 +36,21 @@ const ProjectItem = (props) => {
   };
 
   return (
-    <Card mode={mode} className={classes.projectItem} onClick={() => Toggle()}>
-      <h2 style={{ color: uiColor }}>{props.project.projectTitle}</h2>
+    <Card mode={mode} className={classes.projectItem} >
+      <div style={{ display: 'flex', gap: '20px', width: '100%' }}>
+        <h2 style={{ color: uiColor, width: '95%' }}>{props.project.projectTitle}</h2>
+        <RemoveRedEye className={classes.projectView} onClick={() => Toggle()} />
+      </div>
       <p className={classes.description}>{description}</p>
       {
         modal &&
         <Modal>
-          <h1 style={{ color: nonThemeColor }}> {props.project.projectTitle}</h1>
-          <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px'}}>
-            <img style={{ borderRadius:'9px'}} width={'800px'} height={'400px'} src={props.project?.image ? require(`../${props.project?.image}`) : ''} alt="" />
+          <div style={{ display: 'flex', gap: '20px', width: '100%' }}>
+            <h1 style={{ color: nonThemeColor, width: '95%' }}> {props.project.projectTitle}</h1>
+            <CancelIcon style={{fontSize:'30px'}} className={classes.projectView} onClick={() => Toggle()} />
+          </div>
+          <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>
+            <img style={{ borderRadius: '9px' }} width={'800px'} height={'400px'} src={props.project?.image ? require(`../${props.project?.image}`) : ''} alt="" />
           </section>
 
           <div style={{ margin: "20px 0px 20px 40px", justifyContent: 'center', alignItems: 'center' }}>

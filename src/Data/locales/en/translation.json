@@ -207,7 +207,7 @@
         ]
       },
       {
-        "projectTitle": "Student Management System",
+        "projectTitle": "ScholarNet",
         "description": "A comprehensive system built with Nest.js and MySQL for managing student information, academic records, and communication between stakeholders. The system includes role-based dashboards for administrators, teachers, students, and parents, along with a chat module for real-time communication.",
         "sourceLink": "",
         "key_features": [
@@ -240,7 +240,7 @@
         ]
       },
       {
-        "projectTitle": "Social Media Platform - Dating App",
+        "projectTitle": "Social Media - Dating App",
         "description": "A dating app built with Node.js that resembles Tinder, allowing users to create profiles, view other users' profiles, swipe left or right to indicate interest, and chat with matches.",
         "sourceLink": "",
         "key_features": [
@@ -274,7 +274,7 @@
         ]
       },
       {
-        "projectTitle": "Shipping Management System",
+        "projectTitle": "ShipTrek",
         "description": "A comprehensive system for managing shipping operations, tracking shipments, and optimizing logistics. The system includes features for managing orders, tracking packages, generating shipping labels, and analyzing shipping data.",
         "sourceLink": "",
         "key_features": [

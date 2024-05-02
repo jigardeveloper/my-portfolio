@@ -1,6 +1,6 @@
 .projectItem {
   width: 30%;
-  height: 12rem;
+  height: 11rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -26,7 +26,13 @@
   display: flex;
   justify-content: space-between;
 }
-.projectItem:hover {
+.projectView {
+  margin: 10px 0px 0px 0px;
+  width: 5%;   
+  cursor: pointer;
+  color: #999; 
+}
+.projectView:hover {
   cursor: pointer;
 }
 @keyframes zoom {
@@ -37,7 +43,7 @@
     transform: scale(1.03);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .projectItem {
     height: 12rem;
     min-width: 20rem;
