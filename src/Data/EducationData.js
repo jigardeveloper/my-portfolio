@@ -1,28 +1,33 @@
 export const languagesDone = [
   {
-    name: "HTML",
-    percentDone: 90,
-  },
-  {
-    name: "CSS",
-    percentDone: 60,
-  },
-  {
     name: "Javascript",
-    percentDone: 80,
-  },
-  {
-    name: "React Js",
     percentDone: 90,
   },
   {
-    name: "Node Js",
+    name: "ReactJs",
+    percentDone: 90,
+  }, 
+  {
+    name: "ReduxJs",
     percentDone: 90,
   },
   {
-    name: "Nest Js",
+    name: "NodeJs",
+    percentDone: 90,
+  },
+  {
+    name: "Express",
+    percentDone: 90,
+  },
+  {
+    name: "NestJs",
     percentDone: 80,
   },
+  {
+    name: "NextJs",
+    percentDone: 80,
+  },
+
 ];
 
 export const projectImage = [
