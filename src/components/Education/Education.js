@@ -12,6 +12,7 @@ function Education(props) {
 
   return (
     <Fragment>
+      <Degree />
       <div className={classes.educationHeader}>
         <div className={classes.educationCard}>
           <h1 style={{ color: uiColor }}>{t("Education.Title")}</h1>
@@ -33,8 +34,7 @@ function Education(props) {
         <div className={classes.eduImg}>
           <img src={EducationImg} alt="" />
         </div>
-      </div>
-      <Degree />
+      </div>      
     </Fragment>
   );
 }

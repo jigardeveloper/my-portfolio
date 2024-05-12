@@ -31,9 +31,6 @@
   height: 6rem;
   width: 6rem;
 }
-.skillItem svg:hover {
-  cursor: pointer;
-}
 @media (max-width: 768px) {
   .skillSetCard {
     margin: 2rem auto;
