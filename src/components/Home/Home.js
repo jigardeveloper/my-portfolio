@@ -1,5 +1,4 @@
 import React from "react";
-import profileAvatar from "../asset/logo.png";
 import classes from "./home.module.css";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import { useSelector } from "react-redux";
@@ -22,7 +21,7 @@ function Home(props) {
         </h2>
         <h3 style={{ color: nonThemeColor }}>{t("Home.nickName")}</h3>
         <div className={classes.autoText}>
-          {t("Home.Iam")} &nbsp;{" "}
+          {t("Home.Iam")}
           <span id="typer" style={{ color: uiColor }}></span>
         </div>
         <p className={classes.connectText}>
@@ -33,7 +32,7 @@ function Home(props) {
         <SocialLinks className={classes.links} />
       </div>
       <div className={classes.avatarImage}>
-        <img src={profileAvatar} alt="" />
+        <img src={process.env.PUBLIC_URL + '/favicons/logo.png'} alt="" />
       </div>
     </main>
   );

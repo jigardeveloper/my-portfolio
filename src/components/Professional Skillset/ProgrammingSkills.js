@@ -1,17 +1,26 @@
 import classes from "./programmingSkills.module.css";
 import {
-  python,
-  mongoDB,
-  fireBase,
-  react,
-  nodeJs,
+  html,
+  css,
   js,
+  react,
   redux,
+  node,
+  express,
+  nest,
+  next,
+  mongodb,
+  mysql,
+  supabase,
+  firebase,
+  postgressql,
+  socket
 } from "../asset/svg/svg";
 import { useSelector } from "react-redux";
 import { t } from "i18next";
 
-const skills = [js, fireBase, react, nodeJs, mongoDB, redux, python];
+const skills = [html, css, js, react, redux, node, express, nest, next,
+  mongodb, mysql, postgressql, supabase, socket, firebase];
 const ProgrammingSkills = (props) => {
   const uiColor = useSelector((state) => state.uiColor);
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
