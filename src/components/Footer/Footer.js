@@ -6,12 +6,13 @@ import { t } from "i18next";
 
 function Footer() {
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
+  const themeColor = useSelector((state) => state.theme.color);
   // let currentYear = new Date().getFullYear();
   return (
     <footer className="centered" style={{ color: nonThemeColor }}>
       <CopyrightIcon />
-      &nbsp;2022 &nbsp;Coded By&nbsp; {t("Home.FName")} &nbsp;
-      {t("Home.LName")} 
+      &nbsp;2022 &nbsp;Coded By&nbsp;      
+       <p style={{ color: themeColor}}>{t("Home.FName")+''+t("Home.LName")}</p>
     </footer>
   );
 }

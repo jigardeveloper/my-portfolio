@@ -8,7 +8,7 @@
 }
 .projectImg img {
   max-width: 30rem;
-  height: 30rem;
+  height: 40rem;
 }
 
 .projectHeader {
@@ -54,7 +54,7 @@
 
   .projectImg img {
     margin-top: 2rem;
-    height: 15rem;
+    height: 22rem;
   }
 
   .projectHeader {
