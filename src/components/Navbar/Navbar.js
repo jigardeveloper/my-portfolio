@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { useSelector } from "react-redux";
 import "./navbar.css";
 import { t } from "i18next";
-import Setting from "./Setting";
+import Setting from "../Setting/Setting";
 import SettingsIcon from '@mui/icons-material/Settings';
 
 const Navbar = ({ setSelectedLang, selectedLang }) => {
