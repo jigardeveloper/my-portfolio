@@ -1,24 +1,14 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
+import React, { useState, useCallback } from "react";
+import { useSelector } from "react-redux";
 import "./navbar.css";
-import { themeActions } from "../../store/theme";
-import ColorModal from "./ColorModal";
 import { t } from "i18next";
-import { languageMap } from "../../hooks/i18nextInit";
-import Select from "react-select";
+import Setting from "./Setting";
+import SettingsIcon from '@mui/icons-material/Settings';
 
 const Navbar = ({ setSelectedLang, selectedLang }) => {
-  const dispatch = useDispatch();
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
   const mode = useSelector((state) => state.mode);
-  const activeColor = useSelector((state) => state.theme.color);
-  const [isColorModalShown, setColorModalShown] = useState(false);
-
-  const changeColor = (newColor) => {
-    dispatch(themeActions.changeThemeColor(newColor));
-  };
+  const [modal, setModal] = React.useState(false)
 
   const handleLanguageChange = useCallback(
     (e) => {
@@ -27,20 +17,6 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
     },
     [setSelectedLang]
   );
-
-  const handleModeChange = useCallback(() => {
-    dispatch(themeActions.toggleMode());
-  }, [dispatch]);
-
-  useEffect(() => {
-    const lightModeBtn = document.getElementById("lightModeBtn");
-    const darkModeBtn = document.getElementById("darkModeBtn");
-    if (mode === "dark") {
-      lightModeBtn.style.display = "none";
-      darkModeBtn.style.display = "block";
-      darkModeBtn.style.color = "black";
-    }
-  }, [mode]);
 
   let defaultLan;
   switch (selectedLang) {
@@ -58,12 +34,21 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
       break;
   }
 
+  const toggleSettingModel = () => {
+    setModal(!modal);
+    if (modal) {
+      setModal(false);
+    } else {
+      setModal(true);
+    }
+  }
+
   return (
     <div className="main">
       <div
         className="navbar"
         style={{
-          backgroundColor: mode === "light" ? "rgba(204, 245, 255, 0.6)" : "rgba(0, 0, 0, 0.7)",
+          backgroundColor: mode === "light" ? "rgba(204, 245, 255, 0.6)" : mode === "dark" ? "rgba(0, 0, 0, 0.7)" : 'rgb(0, 31, 63, 0.6)',
           borderBottom: "3px solid purple"
         }}
       >
@@ -73,54 +58,19 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
           </div>
         </div>
         <div className="navsContainer" style={{ color: nonThemeColor }}></div>
-        <Select
-          name="language"
-          options={languageMap}
-          defaultValue={defaultLan}
-          onChange={handleLanguageChange}
-          styles={{
-            option: (base) => ({
-              ...base,
-              border: `1px dotted transparent`,
-              borderRadius: "6px",
-              height: "38px",
-              width: "calc(100% - 24px)",
-              margin: "6px 12px ",
-              fontSize: "16px",
-            }),
-          }}
-          theme={(theme) => ({
-            ...theme,
-            borderRadius: 5,
-            colors: {
-              ...theme.colors,
-              primary: "purple",
-            },
-          })}
-        />
         <div className="selectTheme">
-          <div className="selectMode" onClick={handleModeChange}>
-            <div id="lightModeBtn" style={{ display: mode === "light" ? "block" : "none", color: "white" }}>
-              <LightModeIcon />
-            </div>
-            <div id="darkModeBtn" style={{ display: mode === "dark" ? "block" : "none", color: "black" }}>
-              <DarkModeIcon />
-            </div>
-          </div>
-
-          <div
-            className="colorSelector"
-            onClick={() => setColorModalShown((prev) => !prev)}
-            style={{ backgroundColor: activeColor }}
-          >
-            {isColorModalShown && (
-              <ColorModal
-                selectColor={changeColor}
-                onConfirm={() => setColorModalShown(false)}
-              />
-            )}
-          </div>
+          <SettingsIcon
+            className='settingicon'
+            style={{ color: 'purple', height: '34px', width: '34px' }}
+            onClick={() => toggleSettingModel()}
+          />
         </div>
+        {modal &&
+          <Setting
+            defaultLan={defaultLan}
+            handleLanguageChange={handleLanguageChange}
+            close={() => toggleSettingModel()} />
+        }
       </div>
     </div>
   );

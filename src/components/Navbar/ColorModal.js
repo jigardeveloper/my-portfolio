@@ -1,51 +1,54 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { createPortal } from "react-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ThemeData from "../../Data/ThemeData";
 import "./colorModal.css";
+import { themeActions } from "../../store/theme";
 
-const Backdrop = (props) => {
-  return <div className="backdrop" onClick={props.onConfirm}></div>;
+const Backdrop = ({ onConfirm }) => {
+  return <div className="backdrop" onClick={onConfirm}></div>;
 };
 
 function ColorModal(props) {
   const mode = useSelector((state) => state.mode);
-  let defaultColors;
-  let colorCardBgColor;
-  if (mode === "light") {
-    defaultColors = ThemeData.lightBgThemeColors;
-    colorCardBgColor = "white";
-  } else {
-    defaultColors = ThemeData.darkBgThemeColors;
-    colorCardBgColor = "black";
-  }
+  const dispatch = useDispatch();
 
-  function handleClick(index) {
-    props.selectColor(defaultColors[index]);
-  }
+  const { defaultColors, colorCardBgColor } = useMemo(() => {
+    let defaultColors, colorCardBgColor;
+    if (mode === "light") {
+      defaultColors = ThemeData.lightBgThemeColors;
+      colorCardBgColor = "white";
+    } else {
+      defaultColors = ThemeData.darkBgThemeColors;
+      colorCardBgColor = "black";
+    }
+    return { defaultColors, colorCardBgColor };
+  }, [mode]);
+
+  const changeColor = (index) => {
+    dispatch(themeActions.changeThemeColor(defaultColors[index]));
+  };
 
   return (
-    <React.Fragment>
+    <>
       {createPortal(
-        <Backdrop onClick={props.onConfirm} />,
+        <Backdrop onConfirm={() => props.onConfirm()} />,
         document.getElementById("backdrop")
       )}
       {createPortal(
-        <div
-          className="colorCard"
-          style={{ backgroundColor: colorCardBgColor }}
-        >
+        <div className="colorCard" style={{ backgroundColor: colorCardBgColor }}>
           {defaultColors.map((color, index) => (
             <div
               key={index}
-              onClick={() => handleClick(index)}
+              onClick={() => changeColor(index)}
               style={{ backgroundColor: color }}
             ></div>
           ))}
         </div>,
         document.getElementById("overlay")
       )}
-    </React.Fragment>
+    </>
   );
 }
-export default ColorModal;
+
+export default React.memo(ColorModal);

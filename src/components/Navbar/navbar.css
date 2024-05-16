@@ -130,12 +130,15 @@
     border-bottom: 4px solid purple;
   } 
 }
+.settingicon {
+  animation: spin 5s cubic-bezier(.36, .07, .57, .99) infinite;
+}
 
-@keyframes fade {
-  0% {
-    opacity: 0;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  100% {
-    opacity: 1;
+  to {
+    transform: rotate(360deg);
   }
 }
