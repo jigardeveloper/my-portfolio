@@ -24,6 +24,11 @@
   opacity: 1;
   transition: opacity 0.3s ease-in;
 }
+.scrollable-container {
+  scrollbar-width: thin;
+  scrollbar-color: purple #f1f1f1;
+}
+
 @keyframes renderFromLeft {
   0% {
     opacity: 0;

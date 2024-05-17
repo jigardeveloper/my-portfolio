@@ -11,17 +11,7 @@ if (localStorage.getItem("isTheme") === "dark") {
     },
     nonThemeColor: "white",
   };
-} else if (localStorage.getItem("isTheme") === "mid-dark") { 
-  initialThemeState = {
-    mode: "mid-dark",
-    uiColor: "purple",
-    theme: {
-      color: "cyan",
-      backgroundColor: "rgb(0, 31, 63)",
-    },
-    nonThemeColor: "white",
-  };
-} else {
+} else if (localStorage.getItem("isTheme") === "light") {
   initialThemeState = {
     mode: "light",
     uiColor: "purple",
@@ -30,6 +20,16 @@ if (localStorage.getItem("isTheme") === "dark") {
       backgroundColor: "rgb(237, 249, 254)",
     },
     nonThemeColor: "black",
+  };
+} else {
+  initialThemeState = {
+    mode: "mid-dark",
+    uiColor: "purple",
+    theme: {
+      color: "lightgray",
+      backgroundColor: "rgb(0, 31, 63)",
+    },
+    nonThemeColor: "white",
   };
 }
 
@@ -60,7 +60,7 @@ const themeSlice = createSlice({
       console.log(action.payload);
       if (action.payload === 'mid-dark') {
         state.mode = 'mid-dark';
-        state.theme.color = 'cyan';
+        state.theme.color = 'lightgray';
         state.theme.backgroundColor = 'rgb(0, 31, 63)';
         state.nonThemeColor = 'white';
       }

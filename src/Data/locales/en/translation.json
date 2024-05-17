@@ -14,6 +14,14 @@
     "Connect1": "connect",
     "Connect2": " with me."
   },
+  "Setting": {
+    "title": "Setting",
+    "theme": "theme",
+    "language": "language",
+    "select_language": "select language :",
+    "select_theme": "select theme :",
+    "select_color": "change text color :"
+  },
   "About": {
     "Title": "About Me",
     "Desc": "Introducing myself, Jigar Ahir hailing from the vibrant lands of Gujarat, India! 🇮🇳 Fluent in the languages of the web - HTML, CSS, and JavaScript, I've delved deep into the world of coding. From crafting sleek interfaces with ReactJS and NextJS to powering up the backend with NodeJS, ExpressJS, and NestJS, I'm no stranger to the latest tech stacks. Databases? You name it - MySQL, MongoDB, and even Firebase, I've got it covered. But hey, life's not all about code, right? When I'm not busy crafting digital wonders, you'll find me immersed in the captivating world of anime, where every episode is a journey and  every story is an adventure waiting to unfold! 🎌",

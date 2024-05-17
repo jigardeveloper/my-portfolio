@@ -1,29 +1,22 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import "./setting.css";
 import ColorModal from "../Navbar/ColorModal";
 import { t } from "i18next";
 import { languageMap } from "../../hooks/i18nextInit";
 import Select from "react-select";
 import Mode from "../../theme/mode";
-import { createPortal } from "react-dom";
-import CancelIcon from '@mui/icons-material/Cancel';
-
-const Backdrop = (props) => {
-    return <div className="backdrop" onClick={props.onConfirm}></div>;
-};
+import Modal from "../UI/Model";
 
 function Setting({
     close,
     defaultLan,
     handleLanguageChange,
 }) {
-    const activeColor = useSelector((state) => state.theme.color);
-    const backgroundColor = useSelector((state) => state.theme.backgroundColor);
+    const activeColor = useSelector((state) => state.theme.color);    
     const [isColorModalShown, setColorModalShown] = useState(false);
     const [activeSection, setActiveSection] = useState('general');
-    const uiColor = useSelector((state) => state.uiColor);
-
+    
     const togglePopup = () => {
         close();
     };
@@ -31,17 +24,14 @@ function Setting({
         setActiveSection(sectionId);
         setColorModalShown(false);
     };
+    
     return (
         <React.Fragment>
-            {createPortal(
-                <Backdrop />,
-                document.getElementById("backdrop")
-            )}
-            <div id="popup" style={{ backgroundColor, borderColor: uiColor }}>
-                <div className="header">
-                    <h1 style={{ color: uiColor }}>Settings</h1>
-                    <CancelIcon style={{ fontSize: '30px', color: uiColor }} onClick={togglePopup} />
-                </div>
+            <Modal
+                id="popup"
+                close={() => togglePopup()}
+                title= {t("Setting.title")}
+            >
                 <div className="settings-body">
                     <nav className="sidebar">
                         <ul>
@@ -50,14 +40,14 @@ function Setting({
                                 className={activeSection === 'general' ? 'active' : ''}
                                 onClick={() => handleSectionChange('general')}
                             >
-                                language
+                                 {t("Setting.language")}
                             </a>
                             <a
                                 href="#theme"
                                 className={activeSection === 'theme' ? 'active' : ''}
                                 onClick={() => handleSectionChange('theme')}
                             >
-                                theme
+                                {t("Setting.theme")}
                             </a>
                         </ul>
                     </nav>
@@ -67,8 +57,8 @@ function Setting({
                             id="general"
                             className={`content-section ${activeSection === 'general' ? '' : 'hidden'}`}
                         >
-                            <div style={{ display: 'flex', gap: '30px', width: '100%', }}>
-                                <h3>select language :</h3>
+                            <div className="flex-container">
+                                <h3>{t("Setting.select_language")}</h3>
                                 <Select
                                     name="language"
                                     options={languageMap}
@@ -100,10 +90,10 @@ function Setting({
                             id="theme"
                             className={`content-section ${activeSection === 'theme' ? '' : 'hidden'}`}
                         >
-                            <h3 style={{ margin: '23px 0px 10px 23px' }}>select theme :</h3>
+                            <h3 style={{ margin: '23px 0px 10px 23px' }}>{t("Setting.select_theme")}</h3>
                             <Mode />
                             <div style={{ margin: '23px 0px 0px 23px', display: 'flex', gap: '20px' }}>
-                                <h3>change text color :</h3>
+                                <h3>{t("Setting.select_color")}</h3>
                                 <div className="selectTheme">
                                     <div
                                         className="colorSelector"
@@ -123,8 +113,7 @@ function Setting({
                         </div>
                     </div>
                 </div>
-            </div>
+            </Modal>
         </React.Fragment>
-    );
-}
+    );}
 export default Setting;
