@@ -9,7 +9,7 @@ function Home(props) {
   const uiColor = useSelector((state) => state.uiColor);
 
   return (
-    <main>
+    <main id="home">
       <div className={classes.homeContent}>
         <h1>{t("Home.Hii")}</h1>
         <h2>

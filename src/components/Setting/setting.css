@@ -1,0 +1,108 @@
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  height: 500px;
+  max-height: 500px;
+  z-index: 999;
+  color: 'inherit';
+}
+
+.settings-window {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-body {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sidebar {
+  width: 20%;
+  padding: 5px 15px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul a {
+  text-decoration: none;
+  display: block;
+  padding: 6px 7px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  user-select: none;
+}
+
+.content {
+  height: 100%;
+  padding: 12px 15px;
+  overflow-y: auto;
+  max-height: 395px;
+  flex-grow: 1;
+}
+
+.content-section {
+  height: 300px;
+  display: block;
+}
+
+.content-section.hidden {
+  display: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+
+.react-select__option {
+  border: 1px dotted transparent;
+  border-radius: 6px;
+  height: 38px;
+  width: calc(100% - 24px);
+  margin: 6px 12px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  #popup {
+    width: 85%;
+    max-width: none;
+    height: 80%;
+    max-height: none;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .selectTheme {
+    max-height: none;
+  }
+
+  .content {
+    padding: 12px;
+    max-height: none;
+  }
+
+  .sidebar {
+    max-width: none;
+    width: 25%;
+    height: 80%;
+    max-height: none;
+  }
+}

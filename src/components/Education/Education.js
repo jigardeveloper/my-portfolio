@@ -13,7 +13,7 @@ function Education(props) {
   return (
     <Fragment>
       <Degree />
-      <div className={classes.educationHeader}>
+      <div className={classes.educationHeader} id='education'>
         <div className={classes.educationCard}>
           <h1 style={{ color: uiColor }}>{t("Education.Title")}</h1>
           <h2 style={{ color: nonThemeColor }}>{t("Education.Desc")}</h2>

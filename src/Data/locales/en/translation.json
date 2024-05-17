@@ -1,5 +1,6 @@
 {
   "Home": {
+    "Title": "Home",
     "Hii": "Hi There !",
     "I": "Name is",
     "FName": "  Jigar",
@@ -13,6 +14,14 @@
     "Connect": "Feel free to ",
     "Connect1": "connect",
     "Connect2": " with me."
+  },
+  "Setting": {
+    "title": "Setting",
+    "theme": "theme",
+    "language": "language",
+    "select_language": "select language :",
+    "select_theme": "select theme :",
+    "select_color": "change text color :"
   },
   "About": {
     "Title": "About Me",

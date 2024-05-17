@@ -11,9 +11,9 @@
   height: 15rem;
   width: 8rem;
   position: fixed;
-  left: auto;
-  right: 4rem;
-  top: 8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 0.5rem;
   display: grid;
   grid-template-columns: repeat(2, 3rem);
@@ -21,7 +21,7 @@
   row-gap: 0rem;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 9999;
   animation: fade 0.5s ease-out forwards;
 }
 
@@ -32,13 +32,7 @@
   cursor: pointer;
   animation: zoom 0.2s ease forwards;
 }
-@media (max-width: 768px) {
-  .colorCard {
-    right: 1rem;
-    top: 5rem;
-    border-radius: 0.5rem;
-  }
-}
+
 @keyframes fade {
   0% {
     opacity: 0;

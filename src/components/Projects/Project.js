@@ -13,7 +13,7 @@ const Projects = (props) => {
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
   const uiColor = useSelector((state) => state.uiColor);
   return (
-    <React.Fragment>
+    <div id="projects">
       <div className={styles.projects}>
         <section className={styles.projectImg}>
           <img src={projectCoverImg} alt="" />
@@ -54,7 +54,7 @@ const Projects = (props) => {
           </Button>
         </a>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
