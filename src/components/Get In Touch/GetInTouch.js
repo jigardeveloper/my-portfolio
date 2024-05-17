@@ -28,7 +28,7 @@ const GetInTouch = ({ btnText, setBtnText }) => {
   ));
 
   return (
-    <div className={classes.getInTouch} style={{ borderColor: uiColor }}>
+    <div id="get-in-touch" className={classes.getInTouch} style={{ borderColor: uiColor }}>
       <div className={classes.getInTouchCard}>
         <h1 style={{ color: nonThemeColor }}> {t("Touch.Title")}</h1>
         <p>{t("Touch.Desc")}</p>

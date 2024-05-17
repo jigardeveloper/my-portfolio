@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import "./setting.css";
-import ColorModal from "../Navbar/ColorModal";
+import ColorModal from "../UI/ColorModal";
 import { t } from "i18next";
 import { languageMap } from "../../hooks/i18nextInit";
 import Select from "react-select";

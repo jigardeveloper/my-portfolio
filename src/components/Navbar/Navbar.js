@@ -1,14 +1,17 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import { useSelector } from "react-redux";
 import "./navbar.css";
 import { t } from "i18next";
 import Setting from "../Setting/Setting";
 import SettingsIcon from '@mui/icons-material/Settings';
+import Routes from "./Routes";
 
 const Navbar = ({ setSelectedLang, selectedLang }) => {
+  const menuRef = useRef();
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
   const mode = useSelector((state) => state.mode);
   const [modal, setModal] = React.useState(false)
+  const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
   const handleLanguageChange = useCallback(
     (e) => {
@@ -42,6 +45,15 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
       setModal(true);
     }
   }
+  function handleDropDown() {
+    setIsDropDownVisible((prevValue) => {
+      return !prevValue;
+    });
+  }
+  function handleNavigate() {
+    handleDropDown();
+    menuRef.current.checked = false;
+  }
 
   return (
     <div className="main">
@@ -57,13 +69,22 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
             {t("Home.FName")}&nbsp;{t("Home.LName")}
           </div>
         </div>
-        <div className="navsContainer" style={{ color: nonThemeColor }}></div>
+
+        <div className="navsContainer" style={{ color: nonThemeColor }}>
+          <Routes />
+        </div>
         <div className="selectTheme">
           <SettingsIcon
             className='settingicon'
             style={{ color: 'purple', height: '34px', width: '34px' }}
             onClick={() => toggleSettingModel()}
           />
+          <input type="checkbox" onClick={() => handleDropDown()} ref={menuRef} id="burger-toggle" />
+          <label htmlFor="burger-toggle" className="burger-menu">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </label>
         </div>
         {modal &&
           <Setting
@@ -72,6 +93,9 @@ const Navbar = ({ setSelectedLang, selectedLang }) => {
             close={() => toggleSettingModel()} />
         }
       </div>
+      {isDropDownVisible && <div className="mob-nav" style={{ color: 'white' }}>
+        <Routes onClick={handleNavigate} />
+      </div>}
     </div>
   );
 };
