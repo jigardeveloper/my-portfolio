@@ -7,7 +7,7 @@ I started this blog to document and share my knowledge & experience. pelase chec
   
             git clone https://github.com/jigardeveloper/my-portfolio.git
   
-  Step 2 : cd Portfolio
+  Step 2 : cd my-portfolio
   
   Step 3 : npm install
   
