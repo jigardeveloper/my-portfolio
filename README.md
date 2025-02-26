@@ -1,5 +1,6 @@
-# Portfolio-Website
+# Portfolio-Website 
 Hi, this is a creative professional multi page Portfolio Website Template built with React. It is a modern react website with React Router to switch between differnet pages.
+I started this blog to document and share my knowledge & experience. pelase check out [www.jigar.info]
 
 # Installation and Setup Instructions
   Step 1 : Clone this repository with the Command -
