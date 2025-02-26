@@ -36,3 +36,18 @@ Feel free to Fork this repo and use.
 New customizations and improvements are welcomed.
 
 Give a ⭐ if you like this website!
+
+<br/>
+
+if you like what i do, maybe consider buying me a coffee/tea 🥺👉👈
+
+<a href="https://ko-fi.com/jigarahir" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" width="150" ></a>
+
+<br/>
+**𝙈𝙮 𝙩𝙚𝙘𝙝𝙣𝙤𝙡𝙤𝙜𝙮 𝙨𝙩𝙖𝙘𝙠**
+
+<div>
+  <img src="https://img.shields.io/badge/-JavaScript-f6da1c?style=flat&logo=javascript&logoColor=white">
+  <img src="https://img.shields.io/badge/-React-00b4ce?style=flat&logo=react&logoColor=white">
+  <img src="https://img.shields.io/badge/-Css-black?style=flat&logo=css&logoColor=white"> 
+</div>
