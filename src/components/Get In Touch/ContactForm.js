@@ -84,10 +84,10 @@ const ContactForm = ({ setBtnText, btnText }) => {
     setBtnText((prevValue) => t("Message.SendingMSG"));
     emailjs
       .send(
-        "service_srjthp6",
-        "template_cbnbou4",
+        "your_service",
+        "your_template",
         { ...message },
-        "PujN_50evgSZEa8tS"
+        "secrate"
       )
       .then(
         function (response) {
