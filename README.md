@@ -4,7 +4,7 @@ Hi, this is a creative professional multi page Portfolio Website Template built 
 # Installation and Setup Instructions
   Step 1 : Clone this repository with the Command -
   
-            git clone https://github.com/jigar-developer/new-portfolio_v.0.2.git
+            git clone https://github.com/jigardeveloper/my-portfolio.git
   
   Step 2 : cd Portfolio
   
